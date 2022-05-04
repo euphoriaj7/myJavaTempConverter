@@ -1,14 +1,48 @@
+import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+
+//        create a scanner object so that java can interpret user input
+        Scanner myObj = new Scanner(System.in);
+
+        //        #set a condition so that the program will execute as long as the
+        //        #user puts in the correct kind of weather mesurement
+        while(true) {
+            System.out.println("What will the unit of measurement for the weather data you will provide be in? Fahrenheit or Celsius (F/C)? ");
+            String unit = myObj.nextLine();
+            String unitTemperature = unit.toLowerCase();
+            if (unitTemperature.equals("f") || unitTemperature.equals("c")) {
+                break;
+            } else {
+                System.out.println("Please enter Celcius or Fahrenheit as 'f' or 'c'");
+            }
+        }
+
+//        Define the lowest temperature that the user will give you
+        System.out.println("What is the lowest temperature of the day provided? ");
+        String strVarLowTemp = myObj.nextLine();
+        Float floatVarLowTemp = Float.parseFloat(strVarLowTemp);
+
+//        Define the high temperature given from the user
+        System.out.println("What is the highest temperature of the day provided? ");
+        String strVarHighTemp = myObj.nextLine();
+        Float floatVarHighTemp = Float.parseFloat(strVarHighTemp);
+//        Define whether or not there is sun shining
+
+//        Ask the user if there is sunshine
+                System.out.println("Will it be sunny during the high temperature? (Y/N): ");
+                String varSunny = myObj.nextLine();
     }
+    //        #define the sunny function to see if there was sun
+       public float isSunny(Float varHighTemp, String varSunny){
+        return varHighTemp;
+       }
+
 }
 
 
 
-//        #set a condition so that the program will execute as long as the
-//        #user puts in the correct kind of weather mesurement
-//        while True:
+
 //
 //        #first ask the user to give you the unit of measurment
 //        #they are going to give their data in
@@ -77,15 +111,10 @@ public class Main {
 //        fahr_temp=(cel_temp-32)*(5/9)
 //        return fahr_temp
 //
-//
-//        #define the frost bite given at the actual temperature given
-//        def get_frost_bite():
-//        pass
-//
-//
 //        #define the sunny function to see if there was sun
 //        def sunny_func(high_temp):
 //        var_sun = input("Will it be sunny during the high temperature? (Y/N): ")
+
 //        if var_sun.lower() == 'y':
 //        if high_temp >= 32:
 //        high_temp += 5
