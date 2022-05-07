@@ -11,8 +11,8 @@ just the few factors this program uses.)
 # Development Environment 
 - IDE: IntelliJ
 
--Programming Language: Java
-# Here are its key components
+- Programming Language: Java
+# Key features
   -Askes the user a series of weather related questions 
   
   -Take user input from Fahrenheit or Celcius
